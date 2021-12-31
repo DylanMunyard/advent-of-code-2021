@@ -48,13 +48,6 @@ func Same(t1, t2 *tree.Tree) bool {
 }
 
 func main() {
-	map1 := []string{"1", "2", "3"}
-	map2 := make([]string, len(map1))
-	copy(map2, map1)
-
-	map1[1] = "4"
-	map1[2] = "5"
-
-	fmt.Println("Array_1: ", map1)
-	fmt.Println("Array_2:", map2)
+	fmt.Printf("%t\n", Same(tree.New(1), tree.New(1)))
+	fmt.Printf("%t\n", Same(tree.New(1), tree.New(2)))
 }
