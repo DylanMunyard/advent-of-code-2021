@@ -79,12 +79,6 @@ func main() {
 		}
 	}
 
-	totalPairs := 0
-	for _, i := range pairs {
-		totalPairs += i
-	}
-	fmt.Printf("Total: %d\n", totalPairs)
-
 	ch := make(chan map[string]int)
 	for _ = range make([]int, 40) {
 		go ApplyRules(pairs, elements, ch)
@@ -102,7 +96,7 @@ func main() {
 	elementTick := 0
 	for _, i := range elements {
 		elementCount[elementTick] = i
-		elementTick = elementTick + 1
+		elementTick++
 	}
 
 	sort.Ints(elementCount)
