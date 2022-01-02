@@ -35,7 +35,7 @@ func main() {
 				if _, k := split.Lower[inputs.DotToString(&printDot)]; k {
 					fmt.Printf("#")
 				} else {
-					fmt.Printf(".")
+					fmt.Printf(" ")
 				}
 			}
 			fmt.Println()
